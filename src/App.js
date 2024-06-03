@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Translation from "./components/Translation";
 function App() {
   const [mode, setmode] = useState("light");
   const [modebtn, setmodebtn] = useState("dark");
@@ -38,16 +39,16 @@ function App() {
   };
   return (
     <>
-      {/* <Router> */}
-      <Navbar
-        title="Text-Converter"
-        aboutText="About Us"
-        mode={mode}
-        modebtn={modebtn}
-        myfunc={myfunc}
-      />
-      <Alert alert={alert} />
-      {/* <div className="container my-3">
+      <Router>
+        <Navbar
+          title="LangXConverter"
+          aboutText="About Us"
+          mode={mode}
+          modebtn={modebtn}
+          myfunc={myfunc}
+        />
+        <Alert alert={alert} />
+        {/* <div className="container my-3">
           <Textform
             heading="Enter The Text"
             mode={mode}
@@ -56,24 +57,25 @@ function App() {
             btncol={btncol}
           />
         </div> */}
-      {/* <Routes>
+
+        <Routes>
           <Route
             path="/"
-            element={ */}
-      <div className="container my-3">
-        <Textform
-          heading="Enter The Text"
-          mode={mode}
-          modebtn={modebtn}
-          showAlert={showAlert}
-          btncol={btncol}
-        />
-      </div>
-      {/* }
+            element={
+              <div className="container my-3">
+                <Textform
+                  heading="Enter The Text"
+                  mode={mode}
+                  modebtn={modebtn}
+                  showAlert={showAlert}
+                  btncol={btncol}
+                />
+              </div>
+            }
           ></Route>
-          <Route path="/about" element={<About />}></Route>
+          <Route path="/translate" element={<Translation />}></Route>
         </Routes>
-      </Router> */}
+      </Router>
     </>
   );
 }

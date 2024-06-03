@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 // import { Link } from "react-router-dom";
 export default function Navbar(props) {
@@ -21,21 +22,22 @@ export default function Navbar(props) {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="/">
                 Home
               </a>
             </li>
-            {/* <li class="nav-item">
-              <Link class="nav-link" to="/about">
-                About us
-              </Link>
-            </li> */}
+            <li className="nav-item">
+              <a className="nav-link" href="/translate">
+                Translation
+              </a>
+            </li>
           </ul>
         </div>
-        <div className="form-check form-switch text-light">
+
+        {/* <div className="form-check form-switch text-light">
           <input
             className="form-check-input"
             type="checkbox"
@@ -47,9 +49,9 @@ export default function Navbar(props) {
             className={`form-check-label text-${props.modebtn}`}
             htmlFor="flexSwitchCheckDefault"
           >
-            {"enable " + props.modebtn + " mode"}
+            {"Enable " + props.modebtn + " mode"}
           </label>
-        </div>
+        </div> */}
       </div>
       {/* </div> */}
     </nav>

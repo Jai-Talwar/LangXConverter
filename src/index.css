@@ -1,0 +1,31 @@
+
+
+.button-85{
+    background-color: white;
+    border: none;
+    height: 100%;
+    width: 7rem;
+}
+.button-85:hover{
+    background-color: #ddd;
+}
+
+.button-86{
+    background-color: white;
+    border: none;
+    height: 100%;
+    width: 5rem;
+}
+.button-86:hover{
+    background-color: #ddd;
+}
+.main{
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    border-radius: 7px;
+}
+.myBox:focus{
+    border: none;
+    box-shadow: none!important;
+}
+
